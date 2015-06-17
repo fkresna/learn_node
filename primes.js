@@ -6,8 +6,6 @@ for (var j = 0; j < 100; j++)
 	console.log(intRandom + " = " + isPrime(intRandom));
 }
 
-document.getElementById("answer").innerHTML = Results;
-
 function isPrime(x)
 {
 	var check = true;
