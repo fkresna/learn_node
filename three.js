@@ -15,7 +15,7 @@ for (var j = 0; j < 5; j++)
 	console.log("Present Value : $ " + P);
 	console.log("Monthly Interest Rate : " + i);
 	console.log("Number of Months : " + t);
-	console.log("Future Value : $ " + F);
+	console.log("Future Value : $ " + F + "\n");
 }
 
 function FutureValue(P, i, t)
