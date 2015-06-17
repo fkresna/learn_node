@@ -19,7 +19,7 @@ for (var i = 0; i < 100; i++)
 
 console.log("Numbers : " + Results);
 console.log("Even Number Count : " + count_even);
-console.log("Odd Number Count : " + count_odd + ");
+console.log("Odd Number Count : " + count_odd);
 console.log("Sum Even : " + even);
 console.log("Sum Odd : " + odd);
 
