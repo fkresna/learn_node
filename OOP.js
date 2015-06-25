@@ -62,7 +62,7 @@ var Album5 = new Album (title, first, last, price, release_date, quantity, track
 MyAlbum = [Album1, Album2, Album3, Album4, Album5];
 
 for (var i = 0; i < MyAlbum.length; i++)
-  console.log((i+1) + ". " + MyAlbum[i].print());
+  console.log((i+1) + ". " + MyAlbum[i].print);
 
 MyItems = new Cart();
 counter = 1;
@@ -76,12 +76,12 @@ do
 		qty = parseInt(MyAlbum[choose].quantity.toString());
 		if (qty > 0)
 		{
-			MyItems.add(MyAlbum[choose]);
+			MyItems.add = (MyAlbum[choose]);
 			
-			console.log(counter + ". " + MyAlbum[choose].printPurchase());
+			console.log(counter + ". " + MyAlbum[choose].printPurchase);
 			counter++;
 			
-			MyAlbum[choose].purchase(parseInt(MyAlbum[choose].quantity.toString()));
+			MyAlbum[choose].purchase = parseInt(MyAlbum[choose].quantity.toString());
 			pay = pay + parseInt(MyAlbum[choose].price.toString());
 			money = money - parseInt(MyAlbum[choose].price.toString());
 		}
@@ -99,7 +99,7 @@ console.log("Change = " + money);
 console.log();
 console.log("Album remaining stock");
 for (var i = 0; i < MyAlbum.length; i++)
-  console.log((i+1) + ". " + MyAlbum[i].print());
+  console.log((i+1) + ". " + MyAlbum[i].print);
 	
 
 function Album (title, first_name, last_name, price, release_date, quantity, tracklisting)
