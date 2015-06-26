@@ -1,51 +1,5 @@
-
-var Album = function (title, first_name, last_name, price, release_date, quantity, tracklisting)
-{
-	this.title = title;
-	this.artist = first_name + " " + last_name;
-	this.price = price;
-	this.release_date = release_date;
-	this.quantity = quantity;
-	this.tracklisting = tracklisting;
-}
-
-function Cart()
-{
-	this.Items = [];
-}
-
-Album.prototype.print = function()
-{
-    console.log ("Title = " + this.title);
-    console.log ("Artist = " + this.artist);
-    console.log ("Price = $" + this.price);
-    console.log ("Release Date = " + this.release_date);
-    console.log ("Quantity = " + this.quantity);
-    console.log ("Tracklisting = " + this.tracklisting);
-};
-
-Album.prototype.printPurchase = function()
-{
-	console.log(this.title + "-" + this.artist + "-Qty:1");
-};
-
-Album.prototype.purchase = function(quantity)
-{
-	if (this.quantity > 0)
-	{
-		this.quantity = this.quantity - 1;
-	}
-};
-
-Cart.prototype.add = function(x)
-{
-    this.Items.push(x);
-};
-
-Cart.prototype.remove = function(index)
-{
-    this.Items.splice(index, 1);;
-};
+var Album = require("./shopping_spree.js");
+var Cart =  require("./shopping_spree.js");
 
 //===========================================
 //MAIN PROGRAM
@@ -75,7 +29,10 @@ price = 100;
 quantity = parseInt(Math.random()*(10-1)+1);
 release_date = (new Date()).toString().split(' ').splice(1,3).join(' ');
 tracklisting = ["Love Me Like You Do"," Burn"];
-var Album1 = new Album (title, first, last, price,  release_date, quantity, tracklisting);
+
+var Album1 = new Album(title, first, last, price,  release_date, quantity, tracklisting);
+
+//var Album1 = Album (title, first, last, price,  release_date, quantity, tracklisting);
 
 
 title = "Album 2";
@@ -122,12 +79,16 @@ for (var i = 0; i < MyAlbum.length; i++)
 	MyAlbum[i].print();
 }
 
+
 MyItems = new Cart();
 counter = 1;
 console.log();
 console.log("=======================================================");
 console.log("TRANSACTION");
 console.log("=======================================================");
+
+
+
 do
 {
 	choose = parseInt(Math.random()*(4-0)+0);
